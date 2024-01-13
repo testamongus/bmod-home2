@@ -97,11 +97,21 @@
             }
             section{
                 background: white;
+                color: #111111;
+            }
+            .dark-mode{
+                background: #111111;
+                color: white;
+            }
+            button{
+                cursor: pointer;
             }
         </style>
     </head>
     <body>
         <nav>
+            <button id="DarkMode" onclick="darkmode()">DarkMode</button>
+            </script>
             <ul>
                 <li><a class="active" href="https://dinosaurmod.github.io/Dino-Home">Home</a></li>
                 <li><a href="https://dinosaurmod.github.io/editor.html">Create</a></li>
@@ -112,5 +122,6 @@
             </label>
         </nav>
         <section></section>
+        <script src="/darkmode.js"></script>
     </body>
 </html>
