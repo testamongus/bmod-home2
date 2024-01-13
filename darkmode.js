@@ -1,5 +1,5 @@
 function darkmode() {
-    var SetTheme = document.section
+    var SetTheme = document.body
 
     SetTheme.classList.toggle(".dark-mode");
 
@@ -21,6 +21,6 @@ var GetTheme = JSON.parse(localStorage.getItem('PAGETHEME'));
 console.log(GetTheme)
 
 if (GetTheme === "DARK") {
-    var SetTheme = document.section
+    var SetTheme = document.body
     SetTheme.classList = ".dark-mode"
 }
