@@ -96,46 +96,15 @@
                     left: 0;
                 }
             }
-            .dark-mode{
+            section{
                 background: #111111;
                 color: white;
-            }
-            button{
-                cursor: pointer;
             }
         </style>
     </head>
     <body>
         <nav>
             <ul>
-                <li><a onclick="darkmode()">Dark Mode</a></li><script>
-                    function darkmode() {
-    var SetTheme = document.body
-
-    SetTheme.classList.toggle(".dark-mode");
-
-    var theme;
-
-    if (SetTheme.classList.contains(".dark-mode")){
-        console.log("Dark Mode")
-        theme = 'DARK';
-    } else {
-        console.log("Light Mode")
-        theme = 'LIGHT';
-    }
-
-    localStorage.setItem('PAGETHEME', JSON.stringify(theme));
-
-}
-
-var GetTheme = JSON.parse(localStorage.getItem('PAGETHEME'));
-console.log(GetTheme)
-
-if (GetTheme === "DARK") {
-    var SetTheme = document.body
-    SetTheme.classList = ".dark-mode"
-}
-                </script>
                 <li><a class="active" href="https://dinosaurmod.github.io/Dino-Home">Home</a></li>
                 <li><a href="https://dinosaurmod.github.io/editor.html">Create</a></li>
                 <li><a href="https://github.com/Dinosaurmod/dinosaurmod.github.io/issues">Feedback</a></li>
@@ -144,7 +113,6 @@ if (GetTheme === "DARK") {
                 <i class="fas fa-bars"></i>
             </label>
         </nav>
-        
-        <script src="./darkmode.js"></script>
+        <section></section>
     </body>
 </html>
