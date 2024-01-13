@@ -35,7 +35,7 @@
             nav li{
                 display: inline-block;
                 margin: 0 8px;
-                line-height: 80px;
+                line-height: 60px;
             }
             nav a{
                 color: white;
@@ -52,7 +52,7 @@
             nav #icon{
                 color: white;
                 font-size: 30px;
-                line-height: 80px;
+                line-height: 60px;
                 float: right;
                 margin-right: 40px;
                 cursor: pointer;
@@ -95,10 +95,6 @@
                     left: 0;
                 }
             }
-            section{
-                background: white;
-                color: #111111;
-            }
             .dark-mode{
                 background: #111111;
                 color: white;
@@ -110,9 +106,8 @@
     </head>
     <body>
         <nav>
-            <button id="DarkMode" onclick="darkmode()">DarkMode</button>
-            </script>
             <ul>
+                <li><button id="DarkMode" onclick="darkmode()">Dark Mode</button></li>
                 <li><a class="active" href="https://dinosaurmod.github.io/Dino-Home">Home</a></li>
                 <li><a href="https://dinosaurmod.github.io/editor.html">Create</a></li>
                 <li><a href="https://github.com/Dinosaurmod/dinosaurmod.github.io/issues">Feedback</a></li>
@@ -122,6 +117,6 @@
             </label>
         </nav>
         <section></section>
-        <script src="/darkmode.js"></script>
+        <script src="darkmode.js"></script>
     </body>
 </html>
