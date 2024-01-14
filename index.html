@@ -17,14 +17,14 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             background-color: white;
             color: #111111;
-            transition: background-color 0.25s, color 0.25s;
+            transition: background-color 0.125s, color 0.125s;
         }
 
         nav {
             height: 60px;
             width: 100%;
             background-color: #80F41A;
-            transition: background-color 0.25s;
+            transition: background-color 0.125s;
             align-items: center;
             text-align: center;
         }
@@ -70,7 +70,7 @@
             background: white;
             color: #111111;
             padding: 20px;
-            transition: background-color 0.25s, color 0.25s;
+            transition: background-color 0.125s, color 0.125s;
             align-items: center;
             text-align: center;
         }
@@ -94,12 +94,29 @@
                 $('nav ul').toggleClass('show');
             });
 
+            const storedMode = localStorage.getItem('mode');
+            if (storedMode) {
+                // Apply the stored mode
+                applyMode(storedMode);
+            }
+
             $('#darkModeToggle').click(function(){
-                $('section').toggleClass('dark-mode');
-                $('body').toggleClass('dark-mode');
-                $('nav').toggleClass('dark-mode');
-                // $(this).toggleClass('active');
+                // Toggle dark mode
+                const isDarkMode = $('body').hasClass('dark-mode');
+                const newMode = isDarkMode ? 'light-mode' : 'dark-mode';
+                
+                // Store the mode preference
+                localStorage.setItem('mode', newMode);
+
+                // Apply the new mode
+                applyMode(newMode);
             });
+
+            function applyMode(mode) {
+                $('body').removeClass('dark-mode light-mode').addClass(mode);
+                $('nav').removeClass('dark-mode light-mode').addClass(mode);
+                $('section').removeClass('dark-mode light-mode').addClass(mode);
+            }
 
             $.get("https://api.github.com/repos/Dinosaurmod/dinosaurmod.github.io/commits", function(data) {
             // Display recent commits in a section
