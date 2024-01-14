@@ -102,20 +102,22 @@
             });
 
             $.get("https://api.github.com/repos/Dinosaurmod/dinosaurmod.github.io/commits", function(data) {
-                // Display recent commits in a section
-                var commitsSection = $("#recentCommits");
-                var commitsList = $("<ul>");
+            // Display recent commits in a section
+            var commitsSection = $("#recentCommits");
+            var commitsList = $("<ul>");
 
-                data.forEach(function(commit) {
+            data.forEach(function(commit) {
+                if (commit.committer && commit.committer.login.toLowerCase() !== "web-flow") {
                     var commitItem = $("<li>");
                     var commitInfo = commit.committer ? commit.committer.login : "Unknown";
                     var commitTitle = commit.commit.message;
 
                     commitItem.text(commitInfo + " - " + commitTitle);
                     commitsList.append(commitItem);
-                });
+                }
+            });
 
-                commitsSection.append(commitsList);
+            commitsSection.append(commitsList);
             });
         });
     </script>
