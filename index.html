@@ -107,9 +107,10 @@
             var commitsList = $("<ul>");
 
             data.forEach(function(commit) {
-                if (commit.committer && commit.committer.login.toLowerCase() !== "web-flow") {
+                // Exclude commits made by "web-flow"
+                if (commit.author && commit.author.login.toLowerCase() !== "web-flow") {
                     var commitItem = $("<li>");
-                    var commitInfo = commit.committer ? commit.committer.login : "Unknown";
+                    var commitInfo = commit.author ? commit.author.login : "Unknown";
                     var commitTitle = commit.commit.message;
 
                     commitItem.text(commitInfo + " - " + commitTitle);
@@ -118,7 +119,7 @@
             });
 
             commitsSection.append(commitsList);
-            });
+          });
         });
     </script>
 </head>
