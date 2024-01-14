@@ -100,6 +100,23 @@
                 $('nav').toggleClass('dark-mode');
                 // $(this).toggleClass('active');
             });
+
+            $.get("https://api.github.com/repos/Dinosaurmod/dinosaurmod.github.io/commits", function(data) {
+                // Display recent commits in a section
+                var commitsSection = $("#recentCommits");
+                var commitsList = $("<ul>");
+
+                data.forEach(function(commit) {
+                    var commitItem = $("<li>");
+                    var commitInfo = commit.committer ? commit.committer.login : "Unknown";
+                    var commitTitle = commit.commit.message;
+
+                    commitItem.text(commitInfo + " - " + commitTitle);
+                    commitsList.append(commitItem);
+                });
+
+                commitsSection.append(commitsList);
+            });
         });
     </script>
 </head>
@@ -119,6 +136,11 @@
     <section>
         <h1>Dinosaurmod</h1>
         <p>Welcome to the Home Page of DinosaurMod!</p>
+
+        <div id="recentCommits">
+            <h2>Recent Commits</h2>
+            <ul></ul>
+        </div>
     </section>
 </body>
 </html>
