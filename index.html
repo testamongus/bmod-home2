@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DinosaurMod - Home Page</title>
+    <title>DinosaurMod - Home</title>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <style>
         * {
@@ -17,16 +17,19 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             background-color: white;
             color: #111111;
-            transition: background-color 0.125s, color 0.125s;
         }
 
         nav {
             height: 60px;
             width: 100%;
             background-color: #80F41A;
-            transition: background-color 0.125s;
+            display: flex;
+            justify-content: center;
             align-items: center;
             text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
         }
 
         nav ul {
@@ -49,6 +52,21 @@
             border-radius: 3px;
         }
 
+        nav input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+
+        #searchIcon {
+            font-size: 18px;
+            vertical-align: middle; /* Align the image vertically */
+            border: 1px solid rgb(63, 63, 63);
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
         a.active, a:hover, li #darkModeToggle.active {
             border: 1px solid white;
             transition: 0.5s;
@@ -58,6 +76,7 @@
             width: 30px;
             height: 30px;
             vertical-align: middle; /* Align the image vertically */
+            cursor: pointer;
         }
 
         li #IconImage img {
@@ -66,13 +85,49 @@
             vertical-align: middle; /* Align the image vertically */
         }
 
+        footer {
+            background-color: #ccc;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        footer.dark-mode {
+            background-color: #333333;
+            color: white;
+        }
+
+        .footer-row {
+            margin-bottom: 10px;
+            width: 100%; /* Each row takes the full width */
+            flex: 0 0 30%; /* Adjust the width of each footer-row */
+        }
+
+        .footer-row a {
+            color: #7DD100;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer-row a.dark-mode {
+            color: #7DD100;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 5px;
+        }
+
         section {
             background: white;
             color: #111111;
             padding: 20px;
-            transition: background-color 0.125s, color 0.125s;
             align-items: center;
             text-align: center;
+            margin-top: 60px;
         }
 
         section.dark-mode {
@@ -86,6 +141,16 @@
         }
         nav.dark-mode {
             background-color: #7DD100;
+        }
+        nav.dark-mode input[type="text"] {
+            color: white; /* Darker color for dark mode */
+            background-color: #333333; /* Darker color for dark mode */
+        }
+        nav.dark-mode #searchIcon {
+            color: white; /* Darker color for dark mode */
+            background-color: #333333; /* Darker color for dark mode */
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 3px;
         }
     </style>
     <script>
@@ -116,7 +181,27 @@
                 $('body').removeClass('dark-mode light-mode').addClass(mode);
                 $('nav').removeClass('dark-mode light-mode').addClass(mode);
                 $('section').removeClass('dark-mode light-mode').addClass(mode);
+                $('footer').removeClass('dark-mode light-mode').addClass(mode);
+                $('.footer-row a').removeClass('dark-mode light-mode').addClass(mode);
             }
+
+            function performSearch() {
+                var searchQuery = $('#searchBar').val();
+                console.log('Search Query:', searchQuery);
+                window.open(`https://penguinmod.com/search?q=${searchQuery}`)
+            }
+
+            // Click event for search icon
+            $('#searchIcon').click(function(){
+                performSearch();
+            });
+
+            // Keypress event for Enter key in search bar
+            $('#searchBar').keypress(function(e){
+                if(e.which === 13){ // 13 corresponds to the Enter key
+                    performSearch();
+                }
+            });
 
             $.get("https://api.github.com/repos/Dinosaurmod/dinosaurmod.github.io/commits", function(data) {
             // Display recent commits in a section
@@ -147,7 +232,10 @@
             <li><a id="darkModeToggle"><img src="https://penguinmod.com/moon.svg" alt="Moon Icon"></a></li>
             <li><a href="https://dinosaurmod.github.io/Dino-Home">Home</a></li>
             <li><a href="https://dinosaurmod.github.io/editor.html">Create</a></li>
-            <li><a href="https://github.com/Dinosaurmod/dinosaurmod.github.io/issues">Feedback</a></li>
+            <li>
+                <button id="searchIcon">&#128269;</button>
+                <input type="text" id="searchBar" placeholder="Search for projects on PM...">
+            </li>
         </ul>
         <label id="icon">
             <i class="fas fa-bars"></i>
@@ -162,5 +250,19 @@
             <ul></ul>
         </div>
     </section>
+    <footer>
+        <div class="footer-row">
+            <h3>Website</h3>
+            <a href="https://dinosaurmod.github.io/editor.html">Editor</a>
+            <a href="https://dinosaurmod.github.io/credits.html">Credits</a>
+            <a href="https://github.com/Dinosaurmod">Source</a>
+        </div>
+        <div class="footer-row">
+            <h3>Donate</h3>
+            <a href="https://penguinmod.com/donate">PenguinMod</a>
+            <a href="https://github.com/sponsors/GarboMuffin">TurboWarp</a>
+            <a href="https://www.scratchfoundation.org/donate">Scratch</a>
+        </div>
+    </footer>
 </body>
 </html>
