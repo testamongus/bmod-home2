@@ -9,150 +9,108 @@ permalink: /examples
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DinosaurMod - Examples</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <style>
-        /* Reset CSS */
         * {
             padding: 0;
             margin: 0;
-            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
         }
 
-        /* Body styles */
         body {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             background-color: white;
             color: #111111;
-            margin: 0;
-            padding: 0;
         }
 
-        /* Navigation styles */
         nav {
-            background-color: #80F41A;
             height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            position: fixed;
             width: 100%;
+            background-color: #80F41A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: fixed;
             top: 0;
             z-index: 1000;
         }
 
         nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
+            float: center;
+            margin-left: 50;
         }
 
         nav li {
-            margin: 0 10px;
+            display: inline-block;
+            margin: 0 8px;
+            line-height: 60px;
         }
 
         nav a {
             color: white;
-            text-decoration: none;
             font-size: 18px;
             text-transform: uppercase;
+            border: 1px solid transparent;
+            padding: 7px 10px;
             border-radius: 3px;
-            padding: 10px;
         }
 
-        #darkModeToggle img {
-            width: 30px;
-            height: 30px;
+        nav input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+
+        #searchIcon {
+            font-size: 18px;
+            vertical-align: middle; /* Align the image vertically */
+            border: 1px solid rgb(63, 63, 63);
+            border-radius: 3px;
             cursor: pointer;
         }
 
-        /* Section styles */
-        section {
-            padding: 20px;
-            margin-top: 60px;
+        a.active, a:hover, li #darkModeToggle.active {
+            border: 0px solid white;
+            background-color: rgba(0, 0, 0, 0.125);
+            /* transition: 0.5s; */
         }
 
-        .image-card {
-            text-align: center;
-            margin-bottom: 20px;
+        li #darkModeToggle img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle; /* Align the image vertically */
+            cursor: pointer;
         }
 
-        .image-card img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 5px;
+        li #IconImage img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle; /* Align the image vertically */
+            transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
         }
 
-        .image-card h3 {
-            margin-top: 10px;
-            font-size: 18px;
+        #IconImage img:hover {
+            background-color: transparent;
+            transform: scale(1.1);
         }
 
-        .image-card a {
-            display: block;
-            margin-top: 5px;
-            color: blue;
-            text-decoration: none;
+        #IconImage img:not(:hover) {
+            background-color: transparent;
+            transform: scale(1); /* Return to regular size when not hovered */
         }
 
-        .image-card a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer styles */
         footer {
             background-color: #ccc;
             color: black;
             text-align: center;
             padding: 20px;
-        }
-
-        .footer-row {
-            margin-bottom: 10px;
             display: flex;
             justify-content: space-around;
-        }
-
-        .footer-row a {
-            color: #7DD100;
-            text-decoration: underline;
-        }
-
-        .footer-row a:hover {
-            text-decoration: none;
-        }
-
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #111111;
-            color: white;
-        }
-
-        nav.dark-mode {
-            background-color: #7DD100;
-        }
-
-        nav.dark-mode a {
-            color: white;
-        }
-
-        nav.dark-mode input[type="text"] {
-            color: white;
-            background-color: #333333;
-        }
-
-        nav.dark-mode #searchIcon {
-            color: white;
-            background-color: #333333;
-            border: 1px solid rgb(0, 0, 0);
-            border-radius: 3px;
-        }
-
-        section.dark-mode {
-            background-color: #111111;
-            color: white;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
         footer.dark-mode {
@@ -160,11 +118,81 @@ permalink: /examples
             color: white;
         }
 
+        .footer-row {
+            margin-bottom: 10px;
+            width: 100%; /* Each row takes the full width */
+            flex: 0 0 30%; /* Adjust the width of each footer-row */
+        }
+
+        .footer-row a {
+            color: #7DD100;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 5px;
+        }
+
         .footer-row a.dark-mode {
             color: #7DD100;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        section {
+            background: white;
+            color: #111111;
+            padding: 20px;
+            align-items: center;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        section.dark-mode {
+            background-color: #111111;
+            color: white;
+        }
+
+        body.dark-mode {
+            background-color: #111111;
+            color: white;
+        }
+        nav.dark-mode {
+            background-color: #7DD100;
+        }
+        nav.dark-mode input[type="text"] {
+            color: white; /* Darker color for dark mode */
+            background-color: #333333; /* Darker color for dark mode */
+        }
+        nav.dark-mode #searchIcon {
+            color: white; /* Darker color for dark mode */
+            background-color: #333333; /* Darker color for dark mode */
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 3px;
+        }
+        .image-card {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-card img {
+            width: 100%; /* Adjust the width of the image */
+            max-width: 300px; /* Set maximum width if needed */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners */
+        }
+        .image-card h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .image-card a {
+            display: block;
+            margin-top: 5px;
+            color: blue; /* Link color */
+            text-decoration: none;
+        }
+        .image-card a:hover {
+            text-decoration: underline; /* Underline on hover */
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
         $(document).ready(function(){
             $('#icon').click(function(){
@@ -220,7 +248,7 @@ permalink: /examples
 <body>
     <nav>
         <ul>
-            <li><a href="https://dinosaurmod.github.io/Dino-Home"><img src="https://dinosaurmod.github.io/favicon.ico" alt="Icon"></a></li>
+            <li><a id="IconImage" href="https://dinosaurmod.github.io/Dino-Home"><img src="https://dinosaurmod.github.io/favicon.ico" alt="Icon"></a></li>
             <li><a id="darkModeToggle"><img src="https://penguinmod.com/moon.svg" alt="Moon Icon"></a></li>
             <li><a href="https://dinosaurmod.github.io/editor.html">Create</a></li>
             <li><a href="/Dino-Home/Examples">Examples</a></li>
@@ -236,21 +264,7 @@ permalink: /examples
     <section>
         <h1>Dinosaurmod</h1>
         <p>Welcome to the Example Page of DinosaurMod!</p>
-        <div class="image-card">
-            <img src="https://dinosaurmod.github.io/Dino-Home/static/images/DinoClickerThumb.png" alt="Image">
-            <h3>Dino Clicker</h3>
-            <a href="https://dinosaurmod.github.io/editor.html?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/DinoClicker.dino">Try it out!</a>
-        </div>
-        <div class="image-card">
-            <img src="https://dinosaurmod.github.io/Dino-Home/static/images/ChatGPTThumb.png" alt="Image">
-            <h3>ChatGPT</h3>
-            <a href="https://dinosaurmod.github.io/editor.html?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/ChatGPT.dino">Try it out!</a>
-        </div>
-        <div class="image-card">
-            <img src="https://dinosaurmod.github.io/Dino-Home/static/images/SwearDetectorThumbPNG.png" alt="Image">
-            <h3>Swear Detector</h3>
-            <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/SwearDetector.dino">Try it out!</a>
-        </div>
+        
     </section>
     <footer>
         <h1>DinosaurMod is not affiliated with Scratch, TurboWarp, PenguinMod, the Scratch Team, or the Scratch Foundation.</h1>
