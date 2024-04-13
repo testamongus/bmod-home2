@@ -1,9 +1,14 @@
+---
+layout: default
+title: templates
+permalink: /templates
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DinosaurMod - Home</title>
+    <title>DinosaurMod - Templates</title>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <style>
         * {
@@ -164,7 +169,29 @@
             border: 1px solid rgb(0, 0, 0);
             border-radius: 3px;
         }
-
+        .image-card {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-card img {
+            width: 100%; /* Adjust the width of the image */
+            max-width: 300px; /* Set maximum width if needed */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners */
+        }
+        .image-card h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .image-card a {
+            display: block;
+            margin-top: 5px;
+            color: blue; /* Link color */
+            text-decoration: none;
+        }
+        .image-card a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
     </style>
     <script>
         $(document).ready(function(){
@@ -236,10 +263,6 @@
             commitsSection.append(commitsList);
             
           });
-          <div id="recentCommits">
-            <h2>Recent Commits</h2>
-            <ul></ul>
-          </div>
           */
         });
     </script>
@@ -266,7 +289,11 @@
     </section>
     <footer>
         <h1>DinosaurMod is not affiliated with Scratch, TurboWarp, PenguinMod, the Scratch Team, or the Scratch Foundation.</h1>
-
+        <div class="image-card">
+            <img src="./images/DinoClickerThumb.png" alt="Image">
+            <h3>Dino Clicker</h3>
+            <a href="https://dinosaurmod.github.io/editor.html?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/DinoClicker.dino">Try it out!</a>
+        </div>
         <div class="footer-row">
             <h3>Website</h3>
             <a href="https://dinosaurmod.github.io/editor.html">Editor</a>
