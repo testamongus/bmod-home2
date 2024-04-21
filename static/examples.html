@@ -168,8 +168,17 @@ permalink: /examples
             border: 1px solid rgb(0, 0, 0);
             border-radius: 3px;
         }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Align items horizontally in the center */
+        }
+
         .image-card {
             text-align: center;
+            margin: 0 10px; /* Add some space between cards */
+            flex: 0 0 calc(50% - 20px); /* Adjust the width of each card to take up half of the container */
+            max-width: 300px; /* Set maximum width if needed */
             margin-bottom: 20px;
         }
         .image-card img {
@@ -289,15 +298,17 @@ permalink: /examples
     <section>
         <h1>Dinosaurmod</h1>
         <p>Welcome to the Examples Page of DinosaurMod!</p>
-        <div class="image-card">
-            <img src="https://dinosaurmod.github.io/Dino-Home/static/images/DinoClickerThumb.png" alt="Image">
-            <h3>Dino Clicker</h3>
-            <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/DinoClicker.dino">Try it out!</a>
-        </div>
-        <div class="image-card">
-            <img src="https://dinosaurmod.github.io/Dino-Home/static/images/SwearDetectorThumbPNG.png" alt="Image">
-            <h3>Swear Detector</h3>
-            <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/SwearDetector.dino">Try it out!</a>
+        <div class="section-content">
+            <div class="image-card">
+                <img src="https://dinosaurmod.github.io/Dino-Home/static/images/DinoClickerThumb.png" alt="Image">
+                <h3>Dino Clicker</h3>
+                <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/DinoClicker.dino">Try it out!</a>
+            </div>
+            <div class="image-card">
+                <img src="https://dinosaurmod.github.io/Dino-Home/static/images/SwearDetectorThumbPNG.png" alt="Image">
+                <h3>Swear Detector</h3>
+                <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/SwearDetector.dino">Try it out!</a>
+            </div>
         </div>
     </section>
     <footer>
