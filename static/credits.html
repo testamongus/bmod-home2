@@ -240,6 +240,33 @@ permalink: /credits
                     performSearch();
                 }
             });
+
+            function createUserElement(user) {
+                return `
+                    <a href="${user.href}" target="_blank" rel="noreferrer" class="user">
+                        <img src="${user.image}" width="60" height="60" class="user-image"/>
+                        <div class="user-info">${user.text}</div>
+                    </a>
+                `;
+            }
+
+            function populateUserList(selector, users) {
+                const container = $(selector);
+                users.forEach(user => {
+                    container.append(createUserElement(user));
+                });
+            }
+
+            // Populate user lists
+            populateUserList('.dmDevelopers', UserData.dmDevelopers);
+            populateUserList('.extensionDevelopers', UserData.extensionDevelopers);
+            populateUserList('.pmExtensionDevelopers', UserData.pmExtensionDevelopers);
+            populateUserList('.addonDevelopers', UserData.addonDevelopers);
+
+            // For logo artists, as it's a Promise, we need to handle it asynchronously
+            UserData.logoArtists.then(users => {
+                populateUserList('.logoArtists', users);
+            });
             
             /*
             $.get("https://api.github.com/repos/Dinosaurmod/dinosaurmod.github.io/commits", function(data) {
@@ -268,44 +295,6 @@ permalink: /credits
           </div>
           */
         });
-        
-        const User = ({image, text, href}) => (
-                <a
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.user}
-                >
-                <img
-                    className={styles.userImage}
-                    src={image}
-                    width="60"
-                    height="60"
-                />
-                <div className={styles.userInfo}>
-                    {text}
-                </div>
-                </a>
-            );
-            User.propTypes = {
-                image: PropTypes.string.isRequired,
-                text: PropTypes.string.isRequired,
-               href: PropTypes.string
-            };
-
-            const UserList = ({users}) => (
-                <div className={styles.users}>
-                   {users.map((data, index) => (
-                        <User
-                            key={index}
-                            {...data}
-                        />
-                    ))}
-                </div>
-            );
-            UserList.propTypes = {
-                users: PropTypes.arrayOf(PropTypes.object)
-            };
     </script>
 </head>
 <body>
@@ -347,8 +336,8 @@ permalink: /credits
                 DinosaurMod is made by a single developer.
                 A list is below, but you can also check <a href="https://github.com/orgs/DinosaurMod/people">our GitHub</a> incase this one is out of date.
             </p>
-        <UserList users={UserData.dmDevelopers} />
-        <p><i>The list order is randomized on each refresh.</i></p>
+            <div class="users dmDevelopers"></div>
+            <p><i>The list order is randomized on each refresh.</i></p>
     </section>
     <section>
         <h2>GitHub Pages</h2>
@@ -383,13 +372,13 @@ permalink: /credits
             but we still need to credit these people!
             Check them out below:
         </p>
-        <UserList users={UserData.extensionDevelopers} />
+        <div class="users extensionDevelopers"></div>
         <p><i>The list order is randomized on each refresh.</i></p>
         <p>
             PenguinMod also has a few people who made and submitted extensions too!
             This list may get outdated sometimes, but here they are listed below:
         </p>
-        <UserList users={UserData.pmExtensionDevelopers} />
+        <div class="users pmExtensionDevelopers"></div>
         <p><i>The list order is randomized on each refresh.</i></p>
     </section>
     <section>
@@ -399,7 +388,7 @@ permalink: /credits
             but we hope to have some PenguinMod addons in the future.
             Here are the developers that made the current addons available.
         </p>
-        <UserList users={UserData.addonDevelopers} />
+        <div class="users addonDevelopers"></div>
         <p><i>The list order is randomized on each refresh.</i></p>
     </section>
     <section>
