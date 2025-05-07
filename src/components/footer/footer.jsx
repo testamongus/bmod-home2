@@ -23,7 +23,7 @@ const FooterComponent = function (props) {
         intl
     } = props;
     return (
-        <footer className={classNames(styles.footer, 'footer')}>
+        <footer className={classNames(styles.footer || 'footer', 'footer')}>
             <h1>DinosaurMod is not affiliated with Scratch, TurboWarp, PenguinMod, the Scratch Team, or the Scratch Foundation.</h1>
             <div className="footer-row">
                 <h3>Website</h3>
