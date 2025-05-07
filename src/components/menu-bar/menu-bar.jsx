@@ -56,5 +56,9 @@ const MenuBarComponent = function () {
     )
 }
 
+MenuBarComponent.propTypes = {
+    intl: intlShape
+};
+
 const IntlMenuBar = injectIntl(MenuBarComponent);
 export default (IntlMenuBar)

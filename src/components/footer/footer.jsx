@@ -23,7 +23,7 @@ const FooterComponent = function () {
         <footer className={classNames(styles.footer || 'footer', 'footer')}>
             <h1>DinosaurMod is not affiliated with Scratch, TurboWarp, PenguinMod, the Scratch Team, or the Scratch Foundation.</h1>
             <div className="footer-row">
-                <h3>Website</h3>
+                <h3>{intl.formatMessage(messages.websiteText)}</h3>
                 <a href="https://dinosaurmod.github.io/editor.html">Editor</a>
                 <a href="https://dinosaurmod.github.io/credits.html">Credits</a>
                 <a href="/Dino-Home/examples">Examples</a>
@@ -31,7 +31,7 @@ const FooterComponent = function () {
                 <a href="https://dinosaurmod.betteruptime.com/">Status</a>
             </div>
             <div className="footer-row">
-                <h3>Donate</h3>
+                <h3>{intl.formatMessage(messages.donateText)}</h3>
                 <a href="https://penguinmod.com/donate">PenguinMod</a>
                 <a href="https://github.com/sponsors/GarboMuffin">TurboWarp</a>
                 <a href="https://www.scratchfoundation.org/donate">Scratch</a>
@@ -39,6 +39,10 @@ const FooterComponent = function () {
         </footer>
     )
 }
+
+FooterComponent.propTypes = {
+    intl: intlShape
+};
 
 const IntlFooter = injectIntl(FooterComponent);
 export default (IntlFooter);
