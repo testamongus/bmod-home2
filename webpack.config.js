@@ -31,7 +31,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html',
-            favicon: 'https://dinosaurmod.github.io/favicon.ico'
+            favicon: './favicon.ico'
         })
     ],
     devServer: {

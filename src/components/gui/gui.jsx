@@ -19,18 +19,20 @@ const GUIComponent = props => {
     const pText = isExamplesPage ? "Welcome to the Examples Page of DinosaurMod!" : "Welcome to the Home Page of DinosaurMod!";
 
     return (
-        <MenuBar
-            intl={intl}
-            {...componentProps}
-        />
-        <section>
-            <h1>Dinosaurmod</h1>
-            <p>{pText}</p>
-        </section>
-        <FooterCustom
-            intl={intl}
-            {...componentProps}
-        />
+        <div>
+            <MenuBar
+                intl={intl}
+                {...componentProps}
+            />
+            <section>
+                <h1>Dinosaurmod</h1>
+                <p>{pText}</p>
+            </section>
+            <FooterCustom
+                intl={intl}
+                {...componentProps}
+            />
+        </div>
     )
 }
 
