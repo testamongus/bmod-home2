@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'src'),
         filename: 'bundle.js',
         clean: true
     },
@@ -26,7 +26,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx', '.css', '.png', '.jpg', '.svg', '.woff', '.woff2', '.eot', '.ttf', '.otf', '.json', '.txt'],
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -35,7 +35,7 @@ module.exports = {
         })
     ],
     devServer: {
-        static: path.join(__dirname, 'dist'),
+        static: path.join(__dirname, 'src'),
         port: 3000,
         open: true
     },
