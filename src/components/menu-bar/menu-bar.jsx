@@ -33,10 +33,10 @@ const MenuBarComponent = function (props) {
         <nav className={classNames(styles.menubar, 'menubar')}>
             <ul className={classNames(styles.menubar_ul, 'menubar-ul')}>
                 <li className={classNames(styles.menubar_li, "menubar-li")}>
-                    <a id="IconImage" href="https://dinosaurmod.github.io/Dino-Home"><img src="https://dinosaurmod.github.io/favicon.ico" alt="Icon"></a>
+                    <a id="IconImage" href="https://dinosaurmod.github.io/Dino-Home"><img src="https://dinosaurmod.github.io/favicon.ico" alt="Icon"/></a>
                 </li>
                 <li className={classNames(styles.menubar_li, 'menubar-li')}>
-                    <a id="darkModeToggle"><img src={moonIcon} alt="Moon Icon"></a>
+                    <a id="darkModeToggle"><img src={moonIcon} alt="Moon Icon"/></a>
                 </li>
                 <li className={classNames(styles.menubar_li, 'menubar-li')}>
                     <a href="https://dinosaurmod.github.io/editor.html">{intl.formatMessage(messages.createText)}</a>
