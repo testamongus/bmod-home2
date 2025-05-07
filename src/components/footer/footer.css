@@ -1,4 +1,4 @@
-footer {
+.footer {
     background-color: #ccc;
     color: black;
     text-align: center;
@@ -9,7 +9,7 @@ footer {
     flex-wrap: wrap;
 }
 
-footer.dark-mode {
+.footer.dark-mode {
     background-color: #333333;
     color: white;
 }
