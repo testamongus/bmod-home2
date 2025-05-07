@@ -18,7 +18,7 @@ const messages = defineMessages({
     }
 })
 
-const FooterComponent = function () {
+const FooterComponent = function (props) {
     const { intl } = props;
     return (
         <footer className={classNames(styles.footer || 'footer', 'footer')}>

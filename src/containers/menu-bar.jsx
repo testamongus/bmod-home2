@@ -11,6 +11,7 @@ class MenuBar extends React.Component {
         } = this.props;
         return (
             <IntlMenuBar
+                intl={intl}
                 {...props}
             />
         );

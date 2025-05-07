@@ -25,7 +25,7 @@ const messages = defineMessages({
     },
 })
 
-const MenuBarComponent = function () {
+const MenuBarComponent = function (props) {
     const { intl } = props;
     return (
         <nav className={classNames(styles.menubar || 'menubar', 'menubar')}>
