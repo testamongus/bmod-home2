@@ -15,23 +15,18 @@ const GUIComponent = props => {
         ...componentProps
     } = omit(props, 'dispatch')
 
+    const isExamplesPage = pathname.includes("examples");
+    const pText = isExamplesPage ? "Welcome to the Examples Page of DinosaurMod!" : "Welcome to the Home Page of DinosaurMod!";
+
     return (
         <MenuBar
             intl={intl}
             {...componentProps}
         />
-        {(!pathname.includes("examples")) &&
-            <section>
-                <h1>Dinosaurmod</h1>
-                <p>Welcome to the Home Page of DinosaurMod!</p>
-            </section>
-        }
-        {(pathname.includes("examples")) &&
-            <section>
-                <h1>Dinosaurmod</h1>
-                <p>Welcome to the Examples Page of DinosaurMod!</p>
-            </section>
-        }
+        <section>
+            <h1>Dinosaurmod</h1>
+            <p>{pText}</p>
+        </section>
         <FooterCustom
             intl={intl}
             {...componentProps}
