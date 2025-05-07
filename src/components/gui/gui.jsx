@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
 
-import MenuBar from '../../../containers/menu-bar.jsx';
-import FooterCustom from '../../../containers/footer.jsx';
+import MenuBar from '../../containers/menu-bar.jsx';
+import FooterCustom from '../../containers/footer.jsx';
 
 const pathname = window.location.pathname
 
