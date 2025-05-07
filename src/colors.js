@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const root = document.documentElement;
+    /*const root = document.documentElement;
     root.style.setProperty("--motion-primary", "#80F41A")
-    root.style.setProperty("--motion-primary-dark", "#7DD100")
+    root.style.setProperty("--motion-primary-dark", "#7DD100")*/
 })

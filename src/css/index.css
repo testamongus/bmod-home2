@@ -1,3 +1,5 @@
+@import './colors.css';
+
 * {
     padding: 0;
     margin: 0;
@@ -14,7 +16,7 @@ body {
 nav {
     height: 60px;
     width: 100%;
-    background-color: var(--motion-primary);
+    background-color: $motion-primary;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,14 +114,14 @@ footer.dark-mode {
 }
 
 .footer-row a {
-    color: var(--motion-primary-dark);
+    color: $motion-primary-dark;
     text-decoration: underline;
     display: block;
     margin-bottom: 5px;
 }
 
 .footer-row a.dark-mode {
-    color: var(--motion-primary-dark);
+    color: $motion-primary-dark;
     text-decoration: underline;
     display: block;
     margin-bottom: 5px;
@@ -144,7 +146,7 @@ body.dark-mode {
     color: white;
 }
 nav.dark-mode {
-    background-color: var(--motion-primary-dark);
+    background-color: $motion-primary-dark;
 }
 nav.dark-mode input[type="text"] {
     color: white; /* Darker color for dark mode */
