@@ -1,7 +1,12 @@
-import GUI from "./containers/gui.jsx";
-import {setAppElement} from 'react-modal';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {IntlProvider} from 'react-intl';
 
-export {
-    GUI as default,
-    setAppElement
-}
+import GUI from './containers/gui.jsx';
+
+ReactDOM.render(
+    <IntlProvider locale="en">
+        <GUI />
+    </IntlProvider>,
+    document.getElementById('root')
+);

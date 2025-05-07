@@ -5,6 +5,7 @@ import React from 'react';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
 
 import MenuBar from '../../../containers/menu-bar.jsx';
+import FooterCustom from '../../../containers/footer.jsx';
 
 const pathname = window.location.pathname
 
@@ -31,7 +32,10 @@ const GUIComponent = props => {
                 <p>Welcome to the Examples Page of DinosaurMod!</p>
             </section>
         }
-        
+        <FooterCustom
+            intl={intl}
+            {...componentProps}
+        />
     )
 }
 
