@@ -31,25 +31,25 @@ const MenuBarComponent = function (props) {
     } = props;
     return (
         <nav className={classNames(styles.menubar, 'menubar')}>
-            <ul className={classNames(styles.menubar_ul, 'menubar-ul')}>
-                <li className={classNames(styles.menubar_li, "menubar-li")}>
+            <ul className={classNames(styles.menubar_ul, 'menubar_ul')}>
+                <li className={classNames(styles.menubar_li, "menubar_li")}>
                     <a id="IconImage" href="https://dinosaurmod.github.io/Dino-Home"><img src="https://dinosaurmod.github.io/favicon.ico" alt="Icon"/></a>
                 </li>
-                <li className={classNames(styles.menubar_li, 'menubar-li')}>
+                <li className={classNames(styles.menubar_li, 'menubar_li')}>
                     <a id="darkModeToggle"><img src={moonIcon} alt="Moon Icon"/></a>
                 </li>
-                <li className={classNames(styles.menubar_li, 'menubar-li')}>
+                <li className={classNames(styles.menubar_li, 'menubar_li')}>
                     <a href="https://dinosaurmod.github.io/editor.html">{intl.formatMessage(messages.createText)}</a>
                 </li>
-                <li className={classNames(styles.menubar_li, 'menubar-li')}>
+                <li className={classNames(styles.menubar_li, 'menubar_li')}>
                     <a href="/Dino-Home/examples">{intl.formatMessage(messages.examplesText)}</a>
                 </li>
-                <li className={classNames(styles.menubar_li, 'menubar-li')}>
+                <li className={classNames(styles.menubar_li, 'menubar_li')}>
                     <a href="https://dinosaurmod.betteruptime.com/">{intl.formatMessage(messages.statusText)}</a>
                 </li>
-                <li className={classNames(styles.menubar_li, 'menubar-li')}>
+                <li className={classNames(styles.menubar_li, 'menubar_li')}>
                     <button id="menubar_searchIcon">&#128269;</button>
-                    <input type="text" className={classNames(styles.menubar_input, 'menubar-input')} id="searchBar" placeholder="Search for projects on PM..."/>
+                    <input type="text" className={classNames(styles.menubar_input, 'menubar_input')} id="searchBar" placeholder="Search for projects on PM..."/>
                 </li>
             </ul>
             <label id="icon">
