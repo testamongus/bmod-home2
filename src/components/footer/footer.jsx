@@ -18,10 +18,7 @@ const messages = defineMessages({
     }
 })
 
-const FooterComponent = function (props) {
-    const {
-        intl
-    } = props;
+const FooterComponent = function () {
     return (
         <footer className={classNames(styles.footer || 'footer', 'footer')}>
             <h1>DinosaurMod is not affiliated with Scratch, TurboWarp, PenguinMod, the Scratch Team, or the Scratch Foundation.</h1>
@@ -42,10 +39,6 @@ const FooterComponent = function (props) {
         </footer>
     )
 }
-
-FooterComponent.propTypes = {
-    intl: intlShape.isRequired
-};
 
 const IntlFooter = injectIntl(FooterComponent);
 export default (IntlFooter);

@@ -25,10 +25,7 @@ const messages = defineMessages({
     },
 })
 
-const MenuBarComponent = function (props) {
-    const {
-        intl
-    } = props;
+const MenuBarComponent = function () {
     return (
         <nav className={classNames(styles.menubar || 'menubar', 'menubar')}>
             <ul className={classNames(styles.menubar_ul || 'menubar_ul', 'menubar_ul')}>
@@ -58,10 +55,6 @@ const MenuBarComponent = function (props) {
         </nav>
     )
 }
-
-MenuBarComponent.propTypes = {
-    intl: intlShape.isRequired
-};
 
 const IntlMenuBar = injectIntl(MenuBarComponent);
 export default (IntlMenuBar)
