@@ -5,9 +5,9 @@
         "intl-messageformat": "^2.2.0",
         "lodash.omit": "4.5.0",
         "prop-types": "^15.8.1",
-        "react": "^16.14.0",
-        "react-dom": "^16.0.0",
-        "react-intl": "2.9.0",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "react-intl": "7.1.11",
         "react-intl-redux": "0.7.0",
         "react-modal": "3.9.1"
     },
