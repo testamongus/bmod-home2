@@ -20,7 +20,7 @@ class GUI extends React.Component {
 }
 
 GUI.propTypes = {
-    intl: intlShape.isRequired
+    intl: intlShape
 };
 
 export default injectIntl(GUI);

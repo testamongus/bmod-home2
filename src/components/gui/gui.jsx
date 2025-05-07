@@ -37,7 +37,7 @@ const GUIComponent = props => {
 }
 
 GUIComponent.propTypes = {
-    intl: intlShape.isRequired
+    intl: intlShape
 }
 
 export default injectIntl(GUIComponent);
