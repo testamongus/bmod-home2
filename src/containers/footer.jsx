@@ -11,7 +11,6 @@ class FooterCustom extends React.Component {
         } = this.props;
         return (
             <IntlFooter
-                intl={intl}
                 {...props}
             />
         );
