@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {intlShape} from 'react-intl';
 
-import MenuBarComponent from '../components/menu-bar/menu-bar.jsx';
+import IntlMenuBar from '../components/menu-bar/menu-bar.jsx';
 
 class MenuBar extends React.Component {
     render () {
@@ -11,7 +11,7 @@ class MenuBar extends React.Component {
             ...props
         } = this.props;
         return (
-            <MenuBarComponent
+            <IntlMenuBar
                 intl={intl}
                 {...props}
             />

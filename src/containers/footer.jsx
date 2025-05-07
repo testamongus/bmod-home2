@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {intlShape} from 'react-intl';
 
-import FooterComponent from '../components/footer/footer.jsx';
+import IntlFooter from '../components/footer/footer.jsx';
 
 class FooterCustom extends React.Component {
     render () {
@@ -11,7 +11,7 @@ class FooterCustom extends React.Component {
             ...props
         } = this.props;
         return (
-            <FooterComponent
+            <IntlFooter
                 intl={intl}
                 {...props}
             />

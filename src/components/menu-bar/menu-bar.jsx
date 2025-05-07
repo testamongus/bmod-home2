@@ -63,4 +63,5 @@ MenuBarComponent.propTypes = {
     intl: intlShape.isRequired
 };
 
-export default injectIntl(MenuBarComponent)
+const IntlMenuBar = injectIntl(MenuBarComponent);
+export default (IntlMenuBar)

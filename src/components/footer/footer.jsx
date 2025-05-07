@@ -43,8 +43,9 @@ const FooterComponent = function (props) {
     )
 }
 
-MenuBarComponent.propTypes = {
+FooterComponent.propTypes = {
     intl: intlShape.isRequired
 };
 
-export default injectIntl(MenuBarComponent)
+const IntlFooter = injectIntl(FooterComponent);
+export default (IntlFooter);
