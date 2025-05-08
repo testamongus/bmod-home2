@@ -32,7 +32,7 @@ const MenuBarComponent = function (props) {
     return (
         <nav className="menu-bar">
             <ul className="menu-bar_ul">
-                <li className="menu-bar_li" style={{ marginLeft: '0' }}>
+                <li className="menu-bar_li" style={{ justifyContent: left }}>
                     <a className="menu-bar_a" id="languagesListToggle">
                         <img src={globeIcon} alt="Globe Icon"/>
                         <img src={dropdownCaretIcon} alt="Dropdown Caret"/>
@@ -53,13 +53,13 @@ const MenuBarComponent = function (props) {
                     <a className="menu-bar_a" id="darkModeToggle"><img src={moonIcon} alt="Moon Icon"/></a>
                 </li>
                 <li className="menu-bar_li">
-                    <a className="menu-bar_a" href="https://dinosaurmod.github.io/editor.html">{intl ? intl.formatMessage(messages.createText) : "Create_"}</a>
+                    <a className="menu-bar_a" href="https://dinosaurmod.github.io/editor.html">{intl ? intl.formatMessage(messages.createText) : "Create"}</a>
                 </li>
                 <li className="menu-bar_li">
-                    <a className="menu-bar_a" href="/Dino-Home/examples">{intl ? intl.formatMessage(messages.examplesText) : "Examples_"}</a>
+                    <a className="menu-bar_a" href="/Dino-Home/examples">{intl ? intl.formatMessage(messages.examplesText) : "Examples"}</a>
                 </li>
                 <li className="menu-bar_li">
-                    <a className="menu-bar_a" href="https://dinosaurmod.betteruptime.com/">{intl ? intl.formatMessage(messages.statusText) : "Status_"}</a>
+                    <a className="menu-bar_a" href="https://dinosaurmod.betteruptime.com/">{intl ? intl.formatMessage(messages.statusText) : "Status"}</a>
                 </li>
                 <li className="menu-bar_li">
                     <button id="menubar_searchIcon">&#128269;</button>
