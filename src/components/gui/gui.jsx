@@ -25,7 +25,7 @@ const GUIComponent = props => {
                 {...componentProps}
             />
             <section>
-                <h1>Dinosaurmod</h1>
+                <h1>DinosaurMod</h1>
                 <p>{pText}</p>
             </section>
             <FooterCustom

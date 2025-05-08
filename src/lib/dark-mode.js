@@ -24,20 +24,4 @@ $(document).ready(function(){
         $('footer').removeClass('dark-mode light-mode').addClass(mode);
         $('.footer-row a').removeClass('dark-mode light-mode').addClass(mode);
     }
-
-    function performSearch() {
-        var searchQuery = $('#searchBar').val();
-        console.log('Search Query:', searchQuery);
-        window.open(`https://penguinmod.com/search?q=${searchQuery}`)
-    }
-
-    $('#searchIcon').click(function(){
-        performSearch();
-    });
-
-    $('#searchBar').keypress(function(e){
-        if(e.which === 13){
-            performSearch();
-        }
-    });
 });

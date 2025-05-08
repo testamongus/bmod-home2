@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {IntlProvider} from 'react-intl';
-import './colors.js';
-import './dark-mode.js';
+import './lib/colors.js';
+import './lib/dark-mode.js';
+import './lib/search.js';
 import './css/index.css';
 
 import GUI from './containers/gui.jsx';
