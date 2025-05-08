@@ -37,12 +37,7 @@ module.exports = {
     devServer: {
         static: path.resolve(__dirname, 'dist'),
         port: 3000,
-        open: true,
-        historyApiFallback: {
-            rewrites: [
-                { from: /^\/Dino-Home\/examples/, to: '/index.html' }
-            ]
-        }
+        open: true
     },
     mode: 'development'
 };
