@@ -69,7 +69,7 @@
     background-color: var(--motion-primary-menu);
     border: 1px solid var(--motion-primary-menu);
     top: 40px;
-    right: 0;
+    left: 0;
     z-index: 10;
 }
   

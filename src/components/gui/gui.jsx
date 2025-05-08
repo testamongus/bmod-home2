@@ -9,7 +9,9 @@ import FooterCustom from '../../containers/footer.jsx';
 
 import {BRAND_NAME} from '../../lib/brand.js';
 
-const pathname = window.location.pathname
+import styles from './gui.css';
+
+const pathname = window.location.pathname;
 
 const GUIComponent = props => {
     const {
@@ -30,6 +32,20 @@ const GUIComponent = props => {
                 <h1>{BRAND_NAME}</h1>
                 <p>{pText}</p>
             </section>
+            {(!!isExamplesPage && (
+                <div className="section-content">
+                    <div className="image-card">
+                        <img src="https://dinosaurmod.github.io/Dino-Home/static/images/DinoClickerThumb.png" alt="Image"/>
+                        <h3>Dino Clicker</h3>
+                        <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/DinoClicker.dino">Try it out!</a>
+                    </div>
+                    <div className="image-card">
+                        <img src="https://dinosaurmod.github.io/Dino-Home/static/images/SwearDetectorThumbPNG.png" alt="Image"/>
+                        <h3>Swear Detector</h3>
+                        <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/SwearDetector.dino">Try it out!</a>
+                    </div>
+                </div>
+            ))}
             <FooterCustom
                 intl={intl}
                 {...componentProps}

@@ -37,7 +37,12 @@ module.exports = {
     devServer: {
         static: path.resolve(__dirname, 'dist'),
         port: 3000,
-        open: true
+        open: true,
+        historyApiFallback: {
+            rewrites: [
+                { from: /^\/examples/, to: '/index.html' }
+            ]
+        }
     },
     mode: 'development'
 };
