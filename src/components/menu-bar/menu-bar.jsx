@@ -6,6 +6,8 @@ import {defineMessages, injectIntl, intlShape} from 'react-intl';
 import styles from './menu-bar.css';
 
 import moonIcon from '../../icons/moon.svg';
+import globeIcon from '../../icons/globe.svg';
+import dropdownCaretIcon from '../../icons/dropdown-caret.svg';
 
 const messages = defineMessages({
     createText: {
@@ -30,6 +32,20 @@ const MenuBarComponent = function (props) {
     return (
         <nav className="menu-bar">
             <ul className="menu-bar_ul">
+                <li className="menu-bar_li" style={{ marginLeft: '0' }}>
+                    <a className="menu-bar_a" id="languagesListToggle">
+                        <img src={globeIcon} alt="Globe Icon"/>
+                        <img src={dropdownCaretIcon} alt="Dropdown Caret"/>
+                    </a>
+                    <ul id="languagesDropdown" className="menu-bar_languages-dropdown">
+                        <li className="menu-bar_language-option" data-language="en">
+                            English
+                        </li>
+                        <li className="menu-bar_language-option" data-language="de">
+                            Deutsch
+                        </li>
+                    </ul>
+                </li>
                 <li className="menu-bar_li">
                     <a id="IconImage" href="https://dinosaurmod.github.io/Dino-Home"><img src="https://dinosaurmod.github.io/favicon.ico" alt="Icon"/></a>
                 </li>

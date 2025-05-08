@@ -59,3 +59,30 @@
     border: 1px solid rgb(0, 0, 0);
     border-radius: 3px;
 }
+
+.menu-bar_languages-dropdown {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: var(--motion-primary-menu);
+    border: 1px solid var(--motion-primary-menu);
+    top: 40px;
+    right: 0;
+    z-index: 10;
+}
+  
+.menu-bar_languages-dropdown.visible {
+    display: block;
+}
+  
+.menu-bar_language-option {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+  
+.menu-bar_language-option:hover {
+    background-color: var(--motion-primary);
+}
+  
