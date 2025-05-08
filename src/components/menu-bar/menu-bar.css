@@ -25,6 +25,7 @@
 .menu-bar_a {
     color: white;
     font-size: 18px;
+    font-weight: bold;
     text-transform: uppercase;
     border: 1px solid transparent;
     padding: 7px 10px;
@@ -44,4 +45,18 @@
     border: 1px solid rgb(63, 63, 63);
     border-radius: 3px;
     cursor: pointer;
+}
+
+.menu-bar.dark-mode {
+    background-color: var(--motion-primary-dark);
+}
+.menu-bar.dark-mode input[type="text"] {
+    color: white; /* Darker color for dark mode */
+    background-color: #333333; /* Darker color for dark mode */
+}
+.menu-bar.dark-mode #searchIcon {
+    color: white; /* Darker color for dark mode */
+    background-color: #333333; /* Darker color for dark mode */
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 3px;
 }
