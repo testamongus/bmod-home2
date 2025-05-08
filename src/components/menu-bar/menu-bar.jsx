@@ -7,7 +7,7 @@ import styles from './menu-bar.css';
 
 import moonIcon from '../../icons/moon.svg';
 import globeIcon from '../../icons/globe.svg';
-import dropdownCaretIcon from '../../icons/dropdown-caret.svg';
+import dropdownCaretIcon from '../../icons/dropdown-caret.png';
 
 const messages = defineMessages({
     createText: {
