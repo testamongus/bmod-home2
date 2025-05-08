@@ -76,7 +76,7 @@
     position: absolute;
     background-color: var(--motion-primary-menu);
     border: 1px solid var(--motion-primary-menu);
-    top: 20px;
+    top: 50px;
     left: 0;
     z-index: 10;
 }
@@ -86,7 +86,7 @@
 }
   
 .menu-bar_language-option {
-    padding: 8px 16px;
+    padding: 8px 8px;
     cursor: pointer;
 }
   
