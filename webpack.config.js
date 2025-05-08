@@ -40,7 +40,7 @@ module.exports = {
         open: true,
         historyApiFallback: {
             rewrites: [
-                { from: /^\/examples/, to: '/index.html' }
+                { from: /^\/Dino-Home\/examples/, to: '/index.html' }
             ]
         }
     },
