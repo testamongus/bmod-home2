@@ -26,6 +26,7 @@
     display: inline-block;
     margin: 0 8px;
     line-height: 60px;
+    position: absolute;
     left: 0;
 }
 
