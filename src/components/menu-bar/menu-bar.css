@@ -1,4 +1,4 @@
-.menubar {
+.menu-bar {
     height: 60px;
     width: 100%;
     background-color: var(--motion-primary);
@@ -11,18 +11,18 @@
     z-index: 1000;
 }
 
-.menubar_ul {
+.menu-bar_ul {
     float: center;
     margin-left: 50;
 }
 
-.menubar_li {
+.menu-bar_li {
     display: inline-block;
     margin: 0 8px;
     line-height: 60px;
 }
 
-.menubar_a {
+.menu-bar_a {
     color: white;
     font-size: 18px;
     text-transform: uppercase;
@@ -31,7 +31,7 @@
     border-radius: 3px;
 }
 
-.menubar_input[type="text"] {
+.menu-bar_input[type="text"] {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 3px;

@@ -21,7 +21,7 @@ const messages = defineMessages({
 const FooterComponent = function (props) {
     const { intl } = props;
     return (
-        <footer className={classNames(styles.footer || 'footer', 'footer')}>
+        <footer className={classNames(styles.footerCss || 'footer', 'footer')}>
             <h1>DinosaurMod is not affiliated with Scratch, TurboWarp, PenguinMod, the Scratch Team, or the Scratch Foundation.</h1>
             <div className="footer-row">
                 <h3>{intl ? intl.formatMessage(messages.websiteText) : "Website"}</h3>
