@@ -9,6 +9,9 @@ import FooterCustom from '../../containers/footer.jsx';
 
 import {BRAND_NAME} from '../../lib/brand.js';
 
+import DinoClickerThumb from './example-cards/DinoClickerThumb.png';
+import SwearDetectorThumb from './example-cards/SwearDetectorThumb.png';
+
 import styles from './gui.css';
 
 const pathname = window.location.pathname;
@@ -35,12 +38,12 @@ const GUIComponent = props => {
             {(!!isExamplesPage && (
                 <div className="section-content">
                     <div className="image-card">
-                        <img src="https://dinosaurmod.github.io/Dino-Home/static/images/DinoClickerThumb.png" alt="Image"/>
+                        <img src={DinoClickerThumb} alt="Image"/>
                         <h3>Dino Clicker</h3>
                         <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/DinoClicker.dino">Try it out!</a>
                     </div>
                     <div className="image-card">
-                        <img src="https://dinosaurmod.github.io/Dino-Home/static/images/SwearDetectorThumbPNG.png" alt="Image"/>
+                        <img src={SwearDetectorThumb} alt="Image"/>
                         <h3>Swear Detector</h3>
                         <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/SwearDetector.dino">Try it out!</a>
                     </div>
