@@ -22,6 +22,13 @@
     line-height: 60px;
 }
 
+.menu-bar_li_left {
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 60px;
+    left: 0;
+}
+
 .menu-bar_a {
     color: white;
     font-size: 18px;

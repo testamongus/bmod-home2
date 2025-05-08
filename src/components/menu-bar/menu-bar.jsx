@@ -32,7 +32,7 @@ const MenuBarComponent = function (props) {
     return (
         <nav className="menu-bar">
             <ul className="menu-bar_ul">
-                <li className="menu-bar_li">
+                <li className="menu-bar_li_left">
                     <a className="menu-bar_a" id="languagesListToggle">
                         <img src={globeIcon} alt="Globe Icon"/>
                         <img src={dropdownCaretIcon} alt="Dropdown Caret"/>
