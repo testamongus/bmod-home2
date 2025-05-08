@@ -76,7 +76,7 @@
     position: absolute;
     background-color: var(--motion-primary-menu);
     border: 1px solid var(--motion-primary-menu);
-    top: 40px;
+    top: 20px;
     left: 0;
     z-index: 10;
 }
