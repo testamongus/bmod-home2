@@ -1,4 +1,4 @@
-.footer-css {
+.footer {
     background-color: #ccc;
     color: black;
     text-align: center;
@@ -9,25 +9,25 @@
     flex-wrap: wrap;
 }
 
-.footer-css.dark-mode {
+.footer.dark-mode {
     background-color: #333333;
     color: white;
 }
 
-.footer-css-row {
+.footer-row {
     margin-bottom: 10px;
     width: 100%; /* Each row takes the full width */
     flex: 0 0 30%; /* Adjust the width of each footer-row */
 }
 
-.footer-css-row a {
+.footer-row a {
     color: var(--motion-primary-dark);
     text-decoration: underline;
     display: block;
     margin-bottom: 5px;
 }
 
-.footer-css-row a.dark-mode {
+.footer-row a.dark-mode {
     color: var(--motion-primary-dark);
     text-decoration: underline;
     display: block;
