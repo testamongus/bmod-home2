@@ -27,7 +27,7 @@ const FooterComponent = function (props) {
     const { intl } = props;
     return (
         <footer className="footer">
-            <h1>{intl ? intl.formatMessage(messages.notaffiliatedTextText) : "DinosaurMod is not affiliated with Scratch, TurboWarp, PenguinMod, the Scratch Team, or the Scratch Foundation."}</h1>
+            <h1>{intl ? intl.formatMessage(messages.notaffiliatedText) : "DinosaurMod is not affiliated with Scratch, TurboWarp, PenguinMod, the Scratch Team, or the Scratch Foundation."}</h1>
             <div className="footer-row">
                 <h3>{intl ? intl.formatMessage(messages.websiteText) : "Website"}</h3>
                 <a href="https://dinosaurmod.github.io/editor.html">Editor</a>
