@@ -34,7 +34,7 @@ module.exports = {
             favicon: './favicon.ico'
         }),
         new HtmlWebpackPlugin({
-            template: './examples/index.html',
+            template: './static/examples.html',
             favicon: './favicon.ico',
             filename: 'examples.html'
         })
