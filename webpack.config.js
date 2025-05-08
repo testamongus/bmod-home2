@@ -33,6 +33,10 @@ module.exports = {
             template: './index.html',
             favicon: './favicon.ico'
         })
+        new HtmlWebpackPlugin({
+            template: './examples/index.html',
+            favicon: './favicon.ico'
+        })
     ],
     devServer: {
         static: path.resolve(__dirname, 'dist'),
