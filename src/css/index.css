@@ -59,16 +59,3 @@ body.dark-mode {
     background-color: #111111;
     color: white;
 }
-nav.dark-mode {
-    background-color: var(--motion-primary-dark);
-}
-nav.dark-mode input[type="text"] {
-    color: white; /* Darker color for dark mode */
-    background-color: #333333; /* Darker color for dark mode */
-}
-nav.dark-mode #searchIcon {
-    color: white; /* Darker color for dark mode */
-    background-color: #333333; /* Darker color for dark mode */
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 3px;
-}
