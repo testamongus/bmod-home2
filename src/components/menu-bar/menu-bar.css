@@ -53,7 +53,7 @@
     color: white; /* Darker color for dark mode */
     background-color: #333333; /* Darker color for dark mode */
 }
-.menu-bar.dark-mode #searchIcon {
+.menu-bar.dark-mode #menubar_searchIcon {
     color: white; /* Darker color for dark mode */
     background-color: #333333; /* Darker color for dark mode */
     border: 1px solid rgb(0, 0, 0);

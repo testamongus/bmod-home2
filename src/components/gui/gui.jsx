@@ -7,6 +7,8 @@ import {defineMessages, injectIntl, intlShape} from 'react-intl';
 import MenuBar from '../../containers/menu-bar.jsx';
 import FooterCustom from '../../containers/footer.jsx';
 
+import {BRAND_NAME} from '../../lib/brand.js';
+
 const pathname = window.location.pathname
 
 const GUIComponent = props => {
@@ -25,7 +27,7 @@ const GUIComponent = props => {
                 {...componentProps}
             />
             <section>
-                <h1>DinosaurMod</h1>
+                <h1>{BRAND_NAME}</h1>
                 <p>{pText}</p>
             </section>
             <FooterCustom
