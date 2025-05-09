@@ -1,4 +1,19 @@
 $(document).ready(function () {
+  const waitForElement = (selector, callback) => {
+    const el = document.querySelector(selector);
+    if (el) return callback();
+    const observer = new MutationObserver(() => {
+      const elNow = document.querySelector(selector);
+      if (elNow) {
+        observer.disconnect();
+        callback();
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  };
+
+  waitForElement('.commit-list', function () {
     console.log('Fetching commits...'); // Debug log
       const org = 'dinosaurmod';
       const reposUrl = `https://api.github.com/orgs/${org}/repos?per_page=14`;
@@ -45,7 +60,7 @@ $(document).ready(function () {
 
                     console.log('Appending commit:', message); // Debug log
 
-                    $('#commit-list').append(`
+                    $('.commit-list').append(`
                       <li class="commit">
                         <img src="${avatarUrl}" alt="avatar" class="avatar">
                         <div class="commit-info">
@@ -73,4 +88,5 @@ $(document).ready(function () {
           $('#error-message').show();
         }
       });
+  });
 });
