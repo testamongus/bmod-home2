@@ -8,6 +8,7 @@ import MenuBar from '../../containers/menu-bar.jsx';
 import FooterCustom from '../../containers/footer.jsx';
 import SectionInfo from '../../containers/section-info.jsx';
 import RecentChanges from '../../containers/recent-changes.jsx';
+import Gap from '../../containers/gap.jsx';
 
 import {BRAND_NAME} from '../../lib/brand.js';
 
@@ -45,6 +46,7 @@ const GUIComponent = props => {
                 intl={intl}
                 {...componentProps}
             />
+            <Gap size="2px" />
             {(!!isExamplesPage && (
                 <div className="section-content">
                     <div className="image-card">

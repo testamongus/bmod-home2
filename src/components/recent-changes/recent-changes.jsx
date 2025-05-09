@@ -16,7 +16,7 @@ const RecentChangesComponent = function (props) {
                 </a>
             </div>
             <ul className="commit-list"></ul>
-            <div className="error" style={{ display: 'none' }}>
+            <div className="error-message" style={{ display: 'none' }}>
                 Failed to load recent changes.
             </div>
         </div>
