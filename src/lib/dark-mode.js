@@ -27,9 +27,9 @@ $(document).ready(function(){
         $('.menu-bar_languages-dropdown').removeClass('dark-mode light-mode').addClass(mode);
         $('.menu-bar_language-option').removeClass('dark-mode light-mode').addClass(mode);
         $('#recent-changes').removeClass('dark-mode light-mode').addClass(mode);
-        $('#commit-list .commit, .commit-info, .commit-title, .author-name, .commit-date, .avatar').each(function () {
+        /*$('#commit-list .commit, .commit-info, .commit-title, .author-name, .commit-date, .avatar').each(function () {
             $(this).removeClass('dark-mode light-mode').addClass(mode);
-        });
+        });*/
         $('#error-message').removeClass('dark-mode light-mode').addClass(mode);
     }
 });

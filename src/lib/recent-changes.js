@@ -1,20 +1,14 @@
 $(document).ready(function () {
-  const waitForElement = (selector, callback) => {
-    console.log('waiting for element..'); // Debug log
-    const el = document.getElementById(selector);
-    if (el) return callback();
-    const observer = new MutationObserver(() => {
-      const elNow = document.getElementById(selector);
-      if (elNow) {
-        observer.disconnect();
-        callback();
-      }
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-  };
-
-  waitForElement('commit-list', function () {
+  function waitForRecentChangesList(callback) {
+    const interval = setInterval(() => {
+        const el = document.getElementById('commit-list');
+        if (el) {
+            clearInterval(interval);
+            callback();
+        }
+    }, 100);
+  }
+  waitForRecentChangesList(function () {
     console.log('Fetching commits...'); // Debug log
       const org = 'dinosaurmod';
       const reposUrl = `https://api.github.com/orgs/${org}/repos?per_page=14`;
@@ -89,5 +83,5 @@ $(document).ready(function () {
           $('#error-message').show();
         }
       });
-  });
+    });
 });
