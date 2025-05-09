@@ -7,6 +7,7 @@ import {defineMessages, injectIntl, intlShape} from 'react-intl';
 import MenuBar from '../../containers/menu-bar.jsx';
 import FooterCustom from '../../containers/footer.jsx';
 import SectionInfo from '../../containers/section-info.jsx';
+import RecentChanges from '../../containers/recent-changes.jsx';
 
 import {BRAND_NAME} from '../../lib/brand.js';
 
@@ -39,6 +40,10 @@ const GUIComponent = props => {
             <section>
                 <h1>{BRAND_NAME}</h1>
                 <p>{pText}</p>
+                <RecentChanges
+                    intl={intl}
+                    {...componentProps}
+                />
             </section>
             {(!!isExamplesPage && (
                 <div className="section-content">

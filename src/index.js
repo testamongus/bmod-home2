@@ -5,6 +5,7 @@ import './lib/colors.js';
 import './lib/dark-mode.js';
 import './lib/search.js';
 import './lib/translate.js';
+import './lib/recent-changes.js';
 import './css/index.css';
 
 import de from './translations/de.json';

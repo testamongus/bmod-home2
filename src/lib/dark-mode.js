@@ -25,5 +25,9 @@ $(document).ready(function(){
         $('.footer-row a').removeClass('dark-mode light-mode').addClass(mode);
         $('.section-info').removeClass('dark-mode light-mode').addClass(mode);
         $('.menu-bar_languages-dropdown').removeClass('dark-mode light-mode').addClass(mode);
+        $('.menu-bar_language-option').removeClass('dark-mode light-mode').addClass(mode);
+        $('#recent-changes').each(function() {
+            $(this).removeClass('dark-mode light-mode').addClass(mode);
+        });
     }
 });

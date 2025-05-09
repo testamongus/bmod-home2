@@ -20,6 +20,11 @@ const messages = defineMessages({
         id: "home.footer.donate",
         defaultMessage: 'Donate',
         description: 'examples button title'
+    },
+    communityText: {
+        id: "home.footer.community",
+        defaultMessage: 'Community',
+        description: 'examples button title'
     }
 })
 
@@ -35,6 +40,10 @@ const FooterComponent = function (props) {
                 <a href="/Dino-Home/examples">Examples</a>
                 <a href="https://github.com/Dinosaurmod">Source</a>
                 <a href="https://dinosaurmod.betteruptime.com/">Status</a>
+            </div>
+            <div className="footer-row">
+                <h3>{intl ? intl.formatMessage(messages.communityText) : "Community"}</h3>
+                <a href="https://github.com/Dinosaurmod/dino-home/issues">Report an Issue</a>
             </div>
             <div className="footer-row">
                 <h3>{intl ? intl.formatMessage(messages.donateText) : "Donate"}</h3>

@@ -1,0 +1,99 @@
+#recent-changes{
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 16px;
+    width: 420px;
+    border-radius: 6px;
+}
+
+.dark-mode #recent-changes{
+    border: 1px solid #333;
+    background-color: #1e1e1e;
+}
+
+.header #recent-changes{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+}
+
+.header.dark-mode #recent-changes{
+    border-bottom: 1px solid #333;
+}
+
+.header a #recent-changes{
+    color: var(--motion-primary);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+ul#recent-changes-commit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.commit #recent-changes{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+li.commit.dark-mode #recent-changes{
+    border-bottom: 1px solid #2c2c2c;
+}
+
+li.commit:last-child #recent-changes{
+    border-bottom: none;
+}
+
+.avatar #recent-changes{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.commit-info #recent-changes{
+    flex: 1;
+}
+
+.commit-title a #recent-changes{
+    color: var(--motion-primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.author-name #recent-changes{
+    font-size: 14px;
+    color: #555;
+}
+
+.author-name.dark-mode #recent-changes{
+    color: #ccc;
+}
+
+.commit-date #recent-changes{
+    font-size: 13px;
+    color: #888;
+}
+
+.commit-date.dark-mode #recent-changes{
+    color: #888;
+}
+
+.error #recent-changes{
+    color: #ccc;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.error.dark-mode #recent-changes{
+    color: #999;
+}

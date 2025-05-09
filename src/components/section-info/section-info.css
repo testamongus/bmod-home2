@@ -3,12 +3,12 @@
     background: #9cfc47;
     color: #fff;
     padding: 100px 20px;
-    text-align: left;
+    text-align: center;
     font-size: 24px;
     font-weight: bold;
 }
 
-.section-info h2 {
+.section-info h2{
     margin-bottom: 20px;
 }
 
@@ -26,6 +26,7 @@
     align-items: center;
     cursor: pointer;
     font-size: 20px;
+    margin: 20px auto 0;
 }
 
 .section-info img{

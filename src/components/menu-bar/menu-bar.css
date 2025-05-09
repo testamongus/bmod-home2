@@ -87,14 +87,14 @@
     position: absolute;
     background-color: var(--motion-primary-menu);
     border: 1px solid var(--motion-primary-menu);
-    top: 50px;
+    top: 60px;
     left: 0;
     z-index: 10;
 }
 
 .menu-bar_languages-dropdown.dark-mode {
-    background-color: '#333333';
-    border: 1px solid '#333333';
+    background-color: #333333;
+    border: 1px solid #333333;
 }
   
 .menu-bar_languages-dropdown.visible {
@@ -108,5 +108,14 @@
   
 .menu-bar_language-option:hover {
     background-color: var(--motion-primary);
+}
+
+.menu-bar_language-option.dark-mode {
+    background-color: #333333;
+    border: 1px solid #333333;
+}
+
+.menu-bar_language-option.dark-mode:hover {
+    background-color: var(--motion-primary-dark);
 }
   
