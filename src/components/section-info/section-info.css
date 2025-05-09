@@ -8,6 +8,10 @@
     font-weight: bold;
 }
 
+.section-info h2 {
+    margin-bottom: 20px;
+}
+
 .section-info a{
     color: #fff;
 }
@@ -16,17 +20,18 @@
     background: #fff;
     color: var(--motion-primary);
     font-weight: bold;
-    border: 30px solid #fff;
-    border-radius: 15px;
+    border: 3px solid #fff;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     cursor: pointer;
+    font-size: 20px;
 }
 
 .section-info img{
     background: #fff;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 
 .section-info.dark-mode {
