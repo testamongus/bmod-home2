@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const waitForElement = (selector, callback) => {
-    const el = document.getElementById(selector);
+    console.log('waiting for element..'); // Debug log
     if (el) return callback();
     const observer = new MutationObserver(() => {
       const elNow = document.getElementById(selector);
