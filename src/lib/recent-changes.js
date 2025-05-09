@@ -24,7 +24,7 @@ $(document).ready(function () {
         success: function (repos) {
           let completed = 0;
           if (repos.length === 0) {
-            $('#error-message').show();
+            $('#recent-changes-error-message').show();
             return;
           }
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
                 completed++;
                 if (completed === repos.length) {
                   if (allCommits.length === 0) {
-                    $('#error-message').show();
+                    $('#recent-changes-error-message').show();
                     return;
                   }
 
@@ -54,14 +54,14 @@ $(document).ready(function () {
                     const date = new Date(commit.commit.author.date).toLocaleString();
 
                     $('#recent-changes-commit-list').append(`
-                      <li className="commit" id="recent-changes">
-                        <img src="${avatarUrl}" alt="avatar" class="avatar" id="recent-changes">
-                        <div className="commit-info" id="recent-changes">
-                          <div className="commit-title" id="recent-changes">
-                            <a href="${url}" target="_blank" id="recent-changes">${message}</a>
+                      <li className="commit" id="recent-changes-nodes">
+                        <img src="${avatarUrl}" alt="avatar" class="avatar" id="recent-changes-nodes">
+                        <div className="commit-info" id="recent-changes-nodes">
+                          <div className="commit-title" id="recent-changes-nodes">
+                            <a href="${url}" target="_blank" id="recent-changes-nodes">${message}</a>
                           </div>
-                          <div className="author-name" id="recent-changes">By ${authorName} (${authorLogin})</div>
-                          <div className="commit-date" id="recent-changes">${date}</div>
+                          <div className="author-name" id="recent-changes-nodes">By ${authorName} (${authorLogin})</div>
+                          <div className="commit-date" id="recent-changes-nodes">${date}</div>
                         </div>
                       </li>
                     `);

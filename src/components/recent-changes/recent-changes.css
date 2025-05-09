@@ -11,7 +11,7 @@
     background-color: #1e1e1e;
 }
 
-.header #recent-changes{
+.header #recent-changes-nodes{
     display: flex;
     justify-content: space-between;
     font-weight: bold;
@@ -20,11 +20,11 @@
     margin-bottom: 10px;
 }
 
-.header.dark-mode #recent-changes{
+.header.dark-mode #recent-changes-nodes{
     border-bottom: 1px solid #333;
 }
 
-.header a #recent-changes{
+.header a #recent-changes-nodes{
     color: var(--motion-primary);
     text-decoration: none;
     font-size: 14px;
@@ -36,7 +36,7 @@ ul#recent-changes-commit-list {
     margin: 0;
 }
 
-li.commit #recent-changes{
+li.commit #recent-changes-nodes{
     display: flex;
     gap: 10px;
     margin-bottom: 16px;
@@ -44,56 +44,56 @@ li.commit #recent-changes{
     padding-bottom: 10px;
 }
 
-li.commit.dark-mode #recent-changes{
+li.commit.dark-mode #recent-changes-nodes{
     border-bottom: 1px solid #2c2c2c;
 }
 
-li.commit:last-child #recent-changes{
+li.commit:last-child #recent-changes-nodes{
     border-bottom: none;
 }
 
-.avatar #recent-changes{
+.avatar #recent-changes-nodes{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.commit-info #recent-changes{
+.commit-info #recent-changes-nodes{
     flex: 1;
 }
 
-.commit-title a #recent-changes{
+.commit-title a #recent-changes-nodes{
     color: var(--motion-primary);
     text-decoration: none;
     font-weight: bold;
     font-size: 15px;
 }
 
-.author-name #recent-changes{
+.author-name #recent-changes-nodes{
     font-size: 14px;
     color: #555;
 }
 
-.author-name.dark-mode #recent-changes{
+.author-name.dark-mode #recent-changes-nodes{
     color: #ccc;
 }
 
-.commit-date #recent-changes{
+.commit-date #recent-changes-nodes{
     font-size: 13px;
     color: #888;
 }
 
-.commit-date.dark-mode #recent-changes{
+.commit-date.dark-mode #recent-changes-nodes{
     color: #888;
 }
 
-.error #recent-changes{
+.error #recent-changes-nodes{
     color: #ccc;
     text-align: center;
     margin-top: 20px;
 }
 
-.error.dark-mode #recent-changes{
+.error.dark-mode #recent-changes-nodes{
     color: #999;
 }

@@ -29,5 +29,8 @@ $(document).ready(function(){
         $('#recent-changes').each(function() {
             $(this).removeClass('dark-mode light-mode').addClass(mode);
         });
+        $('#recent-changes-nodes').each(function() {
+            $(this).removeClass('dark-mode light-mode').addClass(mode);
+        });
     }
 });

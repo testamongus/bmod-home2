@@ -40,11 +40,11 @@ const GUIComponent = props => {
             <section>
                 <h1>{BRAND_NAME}</h1>
                 <p>{pText}</p>
-                <RecentChanges
-                    intl={intl}
-                    {...componentProps}
-                />
             </section>
+            <RecentChanges
+                intl={intl}
+                {...componentProps}
+            />
             {(!!isExamplesPage && (
                 <div className="section-content">
                     <div className="image-card">
