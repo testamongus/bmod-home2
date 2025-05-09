@@ -46,7 +46,7 @@ const GUIComponent = props => {
                 intl={intl}
                 {...componentProps}
             />
-            <Gap size="2px" />
+            <Gap size="18px" />
             {(!!isExamplesPage && (
                 <div className="section-content">
                     <div className="image-card">
