@@ -17,7 +17,7 @@ import GUI from './containers/gui.jsx';
 const messages = {
     "de": de,
     "en": en,
-    "es": ea,
+    "es": es,
     "es-419": es419
 };
 
