@@ -13,8 +13,8 @@ const SectionInfoComponent = function (props) {
     const { intl } = props;
     return (
         <div className="section-info">
-            <p>Block-based coding with many capabilities</p>
-            <p>Built off of <a style={{ textDecoration: 'underline' }} href="https://scratch.mit.edu" >Scratch</a>, <a style={{ textDecoration: 'underline' }} href="https://turbowarp.org" >TurboWarp</a> and <a style={{ textDecoration: 'underline' }} href="https://penguinmod.com" >PenguinMod</a>.</p>
+            <h2>Block-based coding with many capabilities</h2>
+            <h2>Built off of <a style={{ textDecoration: 'underline' }} href="https://scratch.mit.edu" >Scratch</a>, <a style={{ textDecoration: 'underline' }} href="https://turbowarp.org" >TurboWarp</a> and <a style={{ textDecoration: 'underline' }} href="https://penguinmod.com" >PenguinMod</a>.</h2>
             <button onClick={openEditor} ><img src={codeIcon}></img>Start Creating</button>
         </div>
     )

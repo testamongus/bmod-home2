@@ -23,5 +23,6 @@ $(document).ready(function(){
         $('section').removeClass('dark-mode light-mode').addClass(mode);
         $('footer').removeClass('dark-mode light-mode').addClass(mode);
         $('.footer-row a').removeClass('dark-mode light-mode').addClass(mode);
+        $('.section-info').removeClass('dark-mode light-mode').addClass(mode);
     }
 });
