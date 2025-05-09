@@ -1,14 +1,4 @@
 $(document).ready(function () {
-  function waitForRecentChangesList(callback) {
-    const interval = setInterval(() => {
-        const el = document.getElementById('commit-list');
-        if (el) {
-            clearInterval(interval);
-            callback();
-        }
-    }, 100);
-  }
-  waitForRecentChangesList(function () {
     console.log('Fetching commits...'); // Debug log
       const org = 'dinosaurmod';
       const reposUrl = `https://api.github.com/orgs/${org}/repos?per_page=14`;
@@ -83,5 +73,4 @@ $(document).ready(function () {
           $('#error-message').show();
         }
       });
-    });
 });
