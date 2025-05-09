@@ -39,6 +39,17 @@
     border-radius: 3px;
 }
 
+.menu-bar_a#languagesListToggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 45px;
+}
+
+.menu-bar_a#languagesListToggle img {
+    display: block;
+}
+
 .menu-bar_input[type="text"] {
     padding: 5px;
     border: 1px solid #ccc;
@@ -79,6 +90,11 @@
     top: 50px;
     left: 0;
     z-index: 10;
+}
+
+.menu-bar_languages-dropdown.dark-mode {
+    background-color: '#333333';
+    border: 1px solid '#333333';
 }
   
 .menu-bar_languages-dropdown.visible {

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const supportedLocales = ['en', 'de'];
+    const supportedLocales = ['de', 'en', 'es', 'es-419'];
     const browserLocale = (navigator.language || 'en').toLowerCase();
     const baseLocale = browserLocale.includes('es-') ? browserLocale : browserLocale.split('-')[0];
 

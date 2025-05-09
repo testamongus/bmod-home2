@@ -1,0 +1,33 @@
+.section-info {
+    margin-top: 60px;
+    background: #9cfc47;
+    color: #fff;
+    padding: 70px 20px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.section-info a{
+    color: #fff;
+}
+
+.section-info button{
+    background: #fff;
+    color: var(--motion-primary);
+    font-weight: bold;
+    border: 10px solid #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.section-info img{
+    background: #fff;
+    width: 20px;
+    height: 20px;
+}
+
+.section-info.dark-mode {
+    background: #68c714;
+}

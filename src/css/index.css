@@ -41,20 +41,6 @@ li #IconImage img {
     transform: scale(1); /* Return to regular size when not hovered */
 }
 
-section {
-    background: white;
-    color: #111111;
-    padding: 20px;
-    align-items: center;
-    text-align: center;
-    margin-top: 60px;
-}
-
-section.dark-mode {
-    background-color: #111111;
-    color: white;
-}
-
 body.dark-mode {
     background-color: #111111;
     color: white;

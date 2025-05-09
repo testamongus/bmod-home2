@@ -1,5 +1,5 @@
 .footer {
-    background-color: #ccc;
+    background-color: rgb(225, 255, 225);
     color: black;
     text-align: center;
     padding: 20px;
@@ -21,7 +21,7 @@
 }
 
 .footer-row a {
-    color: var(--motion-primary-dark);
+    color: var(--motion-primary);
     text-decoration: underline;
     display: block;
     margin-bottom: 5px;

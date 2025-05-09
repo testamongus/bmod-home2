@@ -38,11 +38,17 @@ const MenuBarComponent = function (props) {
                         <img src={dropdownCaretIcon} alt="Dropdown Caret"/>
                     </a>
                     <ul id="languagesDropdown" className="menu-bar_languages-dropdown">
+                        <li className="menu-bar_language-option" data-language="de">
+                            Deutsch
+                        </li>
                         <li className="menu-bar_language-option" data-language="en">
                             English
                         </li>
-                        <li className="menu-bar_language-option" data-language="de">
-                            Deutsch
+                        <li className="menu-bar_language-option" data-language="es">
+                            Español (España)
+                        </li>
+                        <li className="menu-bar_language-option" data-language="es-419">
+                            Español Latinoamericano
                         </li>
                     </ul>
                 </li>

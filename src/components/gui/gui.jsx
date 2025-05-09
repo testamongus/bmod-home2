@@ -6,6 +6,7 @@ import {defineMessages, injectIntl, intlShape} from 'react-intl';
 
 import MenuBar from '../../containers/menu-bar.jsx';
 import FooterCustom from '../../containers/footer.jsx';
+import SectionInfo from '../../containers/section-info.jsx';
 
 import {BRAND_NAME} from '../../lib/brand.js';
 
@@ -28,6 +29,10 @@ const GUIComponent = props => {
     return (
         <div>
             <MenuBar
+                intl={intl}
+                {...componentProps}
+            />
+            <SectionInfo
                 intl={intl}
                 {...componentProps}
             />
