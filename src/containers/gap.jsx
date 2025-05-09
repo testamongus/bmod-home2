@@ -7,7 +7,7 @@ import IntlGap from '../components/gap/gap.jsx';
 class Gap extends React.Component {
     render () {
         const {
-            size
+            size,
             ...props
         } = this.props;
         return (
