@@ -14,7 +14,7 @@ const SectionInfoComponent = function (props) {
     return (
         <div className="section-info">
             <p>Block-based coding with many capabilities</p>
-            <p>Built off of <a style="text-decoration: underline;" href="https://scratch.mit.edu" >Scratch</a>, <a style="text-decoration: underline;" href="https://turbowarp.org" >TurboWarp</a> and <a style="text-decoration: underline;" href="https://penguinmod.com" >PenguinMod</a>.</p>
+            <p>Built off of <a style={{ textDecoration: 'underline' }} href="https://scratch.mit.edu" >Scratch</a>, <a style={{ textDecoration: 'underline' }} href="https://turbowarp.org" >TurboWarp</a> and <a style={{ textDecoration: 'underline' }} href="https://penguinmod.com" >PenguinMod</a>.</p>
             <button onClick={openEditor} ><img src={codeIcon}></img>Start Creating</button>
         </div>
     )
