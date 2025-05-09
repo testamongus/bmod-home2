@@ -11,10 +11,14 @@ const RecentChangesComponent = function (props) {
         <div id="recent-changes">
             <div className="header">
                 <span>Recent changes</span>
-                <a href="https://github.com/dinosaurmod" target="_blank">See more</a>
+                <a href="https://github.com/dinosaurmod" target="_blank" rel="noopener noreferrer">
+                    See more
+                </a>
             </div>
-            <ul id="recent-changes-commit-list"></ul>
-            <div id="recent-changes-error-message" className="error" style={{ display: 'none' }}>Failed to load recent changes.</div>
+            <ul className="commit-list"></ul>
+            <div className="error" style={{ display: 'none' }}>
+                Failed to load recent changes.
+            </div>
         </div>
     )
 }

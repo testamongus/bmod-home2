@@ -13,7 +13,7 @@ $(document).ready(function () {
     observer.observe(document.body, { childList: true, subtree: true });
   };
 
-  waitForElement('#recent-changes-commit-list', function () {
+  waitForElement('#commit-list', function () {
       const org = 'dinosaurmod';
       const reposUrl = `https://api.github.com/orgs/${org}/repos?per_page=14`;
       let allCommits = [];
@@ -24,7 +24,7 @@ $(document).ready(function () {
         success: function (repos) {
           let completed = 0;
           if (repos.length === 0) {
-            $('#recent-changes-error-message').show();
+            $('#error-message').show();
             return;
           }
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
                 completed++;
                 if (completed === repos.length) {
                   if (allCommits.length === 0) {
-                    $('#recent-changes-error-message').show();
+                    $('#error-message').show();
                     return;
                   }
 
@@ -53,15 +53,15 @@ $(document).ready(function () {
                     const avatarUrl = commit.author ? commit.author.avatar_url : 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
                     const date = new Date(commit.commit.author.date).toLocaleString();
 
-                    $('#recent-changes-commit-list').append(`
-                      <li className="commit" id="recent-changes-nodes">
-                        <img src="${avatarUrl}" alt="avatar" class="avatar" id="recent-changes-nodes">
-                        <div className="commit-info" id="recent-changes-nodes">
-                          <div className="commit-title" id="recent-changes-nodes">
-                            <a href="${url}" target="_blank" id="recent-changes-nodes">${message}</a>
+                    $('#commit-list').append(`
+                      <li class="commit">
+                        <img src="${avatarUrl}" alt="avatar" class="avatar">
+                        <div class="commit-info">
+                          <div class="commit-title">
+                            <a href="${url}" target="_blank">${message}</a>
                           </div>
-                          <div className="author-name" id="recent-changes-nodes">By ${authorName} (${authorLogin})</div>
-                          <div className="commit-date" id="recent-changes-nodes">${date}</div>
+                          <div class="author-name">By ${authorName} (${authorLogin})</div>
+                          <div class="commit-date">${date}</div>
                         </div>
                       </li>
                     `);
@@ -71,14 +71,14 @@ $(document).ready(function () {
               error: function () {
                 completed++;
                 if (completed === repos.length && allCommits.length === 0) {
-                  $('#recent-changes-error-message').show();
+                  $('#error-message').show();
                 }
               }
             });
           });
         },
         error: function () {
-          $('#recent-changes-error-message').show();
+          $('#error-message').show();
         }
       });
   });
