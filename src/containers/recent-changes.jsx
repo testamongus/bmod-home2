@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {intlShape} from 'react-intl';
 
-import RecentChangesComponent from '../components/section-info/recent-changes.jsx';
+import RecentChangesComponent from '../components/recent-changes/recent-changes.jsx';
 
 class RecentChanges extends React.Component {
     render () {
