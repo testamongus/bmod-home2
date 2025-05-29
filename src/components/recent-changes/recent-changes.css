@@ -6,6 +6,7 @@
     border-radius: 6px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
     margin: 0 auto;
+    height: 490px;
 }
 
 .dark-mode #recent-changes{

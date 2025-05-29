@@ -1,0 +1,44 @@
+#signup-div{
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 16px;
+    width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+
+.dark-mode #signup-div{
+    border-color: #333;
+    background-color: #1e1e1e;
+}
+
+#signup-div #signup-submit-button{
+    border: 1px solid #80F41A;
+    background-color: #80F41A;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    color: white;
+    cursor: pointer;
+}
+
+#signup-div #signup-password-input,
+#signup-div #signup-username-input{
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.dark-mode #signup-div #signup-password-input,
+.dark-mode #signup-div #signup-username-input{
+    border-color: #333;
+    background-color: #1e1e1e;
+}

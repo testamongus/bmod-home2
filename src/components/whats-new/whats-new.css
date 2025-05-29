@@ -1,0 +1,36 @@
+#whats-new{
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 16px;
+    width: 450px;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    height: 490px;
+}
+
+.dark-mode #whats-new{
+    border-color: #333;
+    background-color: #1e1e1e;
+}
+
+#whats-new .header{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.dark-mode #whats-new .header{
+    border-bottom: 1px solid #333;
+    color: #ccc;
+}
+
+#whats-new .header a{
+    color: var(--motion-primary);
+    text-decoration: none;
+    font-size: 14px;
+}

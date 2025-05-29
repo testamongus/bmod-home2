@@ -37,6 +37,11 @@ module.exports = {
             template: './static/examples.html',
             favicon: './favicon.ico',
             filename: 'examples.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './static/signup.html',
+            favicon: './favicon.ico',
+            filename: 'signup.html'
         })
     ],
     devServer: {

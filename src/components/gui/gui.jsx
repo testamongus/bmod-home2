@@ -26,6 +26,7 @@ const GUIComponent = props => {
     } = omit(props, 'dispatch')
 
     const isExamplesPage = pathname.includes("examples");
+    const isInSignUpPage = pathname.includes("signup");
     const pText = isExamplesPage ? "Welcome to the Examples Page of DinosaurMod!" : "Welcome to the Home Page of DinosaurMod!";
 
     return (
@@ -34,37 +35,46 @@ const GUIComponent = props => {
                 intl={intl}
                 {...componentProps}
             />
-            <SectionInfo
-                intl={intl}
-                {...componentProps}
-            />
-            <section>
-                <h1>{BRAND_NAME}</h1>
-                <p>{pText}</p>
-            </section>
-            <RecentChanges
-                intl={intl}
-                {...componentProps}
-            />
-            <Gap size="18px" />
-            {(!!isExamplesPage && (
-                <div className="section-content">
-                    <div className="image-card">
-                        <img src={DinoClickerThumb} alt="Image"/>
-                        <h3>Dino Clicker</h3>
-                        <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/DinoClicker.dino">Try it out!</a>
-                    </div>
-                    <div className="image-card">
-                        <img src={SwearDetectorThumb} alt="Image"/>
-                        <h3>Swear Detector</h3>
-                        <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/SwearDetector.dino">Try it out!</a>
-                    </div>
+            {(!isInSignUpPage && (
+                <div className="thats enough divs!!!">
+                    <SectionInfo
+                        intl={intl}
+                        {...componentProps}
+                    />
+                    <section>
+                        <h1>{BRAND_NAME}</h1>
+                        <p>{pText}</p>
+                    </section>
+                    <RecentChanges
+                        intl={intl}
+                        {...componentProps}
+                    />
+                    <Gap size="18px" />
+                    {(!!isExamplesPage && (
+                        <div className="section-content">
+                            <div className="image-card">
+                                <img src={DinoClickerThumb} alt="Image"/>
+                                <h3>Dino Clicker</h3>
+                                <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/DinoClicker.dino">Try it out!</a>
+                            </div>
+                            <div className="image-card">
+                                <img src={SwearDetectorThumb} alt="Image"/>
+                                <h3>Swear Detector</h3>
+                                <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/SwearDetector.dino">Try it out!</a>
+                            </div>
+                        </div>
+                    ))}
+                    <FooterCustom
+                        intl={intl}
+                        {...componentProps}
+                    />
                 </div>
             ))}
-            <FooterCustom
-                intl={intl}
-                {...componentProps}
-            />
+            {(!!isInSignUpPage && (
+                <div className="thats enough divs!!!">
+                    <p></p>
+                </div>
+            ))}
         </div>
     )
 }
