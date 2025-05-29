@@ -26,6 +26,7 @@
     cursor: pointer;
 }
 
+#signup-div #signup-email-input,
 #signup-div #signup-password-input,
 #signup-div #signup-username-input{
     border: 1px solid #ccc;
@@ -37,6 +38,7 @@
     cursor: pointer;
 }
 
+.dark-mode #signup-div #signup-email-input,
 .dark-mode #signup-div #signup-password-input,
 .dark-mode #signup-div #signup-username-input{
     border-color: #333;
