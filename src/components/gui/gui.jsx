@@ -9,6 +9,7 @@ import FooterCustom from '../../containers/footer.jsx';
 import SectionInfo from '../../containers/section-info.jsx';
 import RecentChanges from '../../containers/recent-changes.jsx';
 import Gap from '../../containers/gap.jsx';
+import SignUpGui from '../../containers/signup-gui.jsx';
 
 import {BRAND_NAME} from '../../lib/brand.js';
 
@@ -72,7 +73,10 @@ const GUIComponent = props => {
             ))}
             {(!!isInSignUpPage && (
                 <div className="thats enough divs!!!">
-                    <p></p>
+                    <SignUpGui
+                        intl={intl}
+                        {...componentProps}
+                    />
                 </div>
             ))}
         </div>
