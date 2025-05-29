@@ -2,6 +2,7 @@ function handleSubmit(e) {
     e.preventDefault();
     const username = e.target.username.value;
     const password = e.target.password.value;
+    const email = e.target.email.value;
 
     let errorMessage;
 
