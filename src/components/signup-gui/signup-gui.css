@@ -41,4 +41,5 @@
 .dark-mode #signup-div #signup-username-input{
     border-color: #333;
     background-color: #1e1e1e;
+    color: white;
 }

@@ -8,8 +8,17 @@ function handleSubmit(e) {
     function displayError(message) {
         const errorText = document.getElementById('signup-error-message');
         errorText.style.display = "block";
+        errorText.style.color = "red";
         errorText.innerText = String(message);
         console.error(String(message));
+    }
+
+    function displayWarn(message) {
+        const errorText = document.getElementById('signup-error-message');
+        errorText.style.display = "block";
+        errorText.style.color = "yellow";
+        errorText.innerText = String(message);
+        console.warn(String(message));
     }
 
     if (username.length < 3) {
@@ -30,9 +39,8 @@ function handleSubmit(e) {
         return;
     }
     
-    console.log("Your username and Password:", { username, password });
-    displayError("Just to let you know, this doesn't do anything");
-    document.getElementById('signup-error-message').style.color = "yellow"
+    console.log("Your username, email and Password:", { username, email, password });
+    displayWarn("Just to let you know, this doesn't actually do anything");
 }
 
 export default handleSubmit;

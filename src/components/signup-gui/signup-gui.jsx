@@ -21,6 +21,10 @@ const SignUpGuiComponent = function (props) {
                 <h3>Username</h3>
                 <input type='text' id='signup-username-input' name='username' required/>
             </div>
+            <div id="signup-email-div">
+                <h3>Email</h3>
+                <input type='email' id='signup-email-input' name='email' required/>
+            </div>
             <Gap size="18px" />
             <div id="signup-password-div">
                 <h3>Password</h3>

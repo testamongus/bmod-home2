@@ -72,7 +72,7 @@ const GUIComponent = props => {
                 </div>
             ))}
             {(!!isInSignUpPage && (
-                <div className="thats enough divs!!!">
+                <div className="page-wrapper">
                     <SignUpGui
                         intl={intl}
                         {...componentProps}
