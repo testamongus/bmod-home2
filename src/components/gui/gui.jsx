@@ -27,7 +27,7 @@ const GUIComponent = props => {
 
     const isExamplesPage = pathname.includes("examples");
     const isInSignUpPage = pathname.includes("signup");
-    const pText = isExamplesPage ? "Welcome to the Examples Page of DinosaurMod!" : "Welcome to the Home Page of DinosaurMod!";
+    const pText = isExamplesPage ? "Welcome to the Examples Page of Banana-mod!" : "Welcome to the Home Page of Banana-mod!";
 
     return (
         <div>
@@ -64,10 +64,7 @@ const GUIComponent = props => {
                             </div>
                         </div>
                     ))}
-                    <FooterCustom
-                        intl={intl}
-                        {...componentProps}
-                    />
+
                 </div>
             ))}
             {(!!isInSignUpPage && (
