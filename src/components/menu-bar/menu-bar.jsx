@@ -53,23 +53,17 @@ const MenuBarComponent = function (props) {
                     </ul>
                 </li>
                 <li className="menu-bar_li">
-                    <a id="IconImage" href="https://dinosaurmod.github.io/Dino-Home"><img src="https://dinosaurmod.github.io/favicon.ico" alt="Icon"/></a>
+                    <a id="IconImage" href="https://banana-mod.github.io/home"><img src="https://banana-mod.github.io/favicon.ico" alt="Icon"/></a>
                 </li>
                 <li className="menu-bar_li">
                     <a className="menu-bar_a" id="darkModeToggle"><img src={moonIcon} alt="Moon Icon"/></a>
                 </li>
                 <li className="menu-bar_li">
-                    <a className="menu-bar_a" href="https://dinosaurmod.github.io/editor.html">{intl ? intl.formatMessage(messages.createText) : "Create"}</a>
-                </li>
-                <li className="menu-bar_li">
-                    <a className="menu-bar_a" href="/Dino-Home/examples">{intl ? intl.formatMessage(messages.examplesText) : "Examples"}</a>
-                </li>
-                <li className="menu-bar_li">
-                    <a className="menu-bar_a" href="https://dinosaurmod.betteruptime.com/">{intl ? intl.formatMessage(messages.statusText) : "Status"}</a>
+                    <a className="menu-bar_a" href="https://banana-mod.github.io/editor.html">{intl ? intl.formatMessage(messages.createText) : "Create"}</a>
                 </li>
                 <li className="menu-bar_li">
                     <button id="menubar_searchIcon">&#128269;</button>
-                    <input type="text" className="menu-bar_input" id="menubar_searchBar" placeholder="Search for projects on PM..."/>
+                    <input type="text" className="menu-bar_input" id="menubar_searchBar" placeholder="Search for projects on Snail-ide..."/>
                 </li>
             </ul>
             <label id="icon">
