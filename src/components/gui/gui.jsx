@@ -50,20 +50,6 @@ const GUIComponent = props => {
                         {...componentProps}
                     />
                     <Gap size="18px" />
-                    {(!!isExamplesPage && (
-                        <div className="section-content">
-                            <div className="image-card">
-                                <img src={DinoClickerThumb} alt="Image"/>
-                                <h3>Dino Clicker</h3>
-                                <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/DinoClicker.dino">Try it out!</a>
-                            </div>
-                            <div className="image-card">
-                                <img src={SwearDetectorThumb} alt="Image"/>
-                                <h3>Swear Detector</h3>
-                                <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/SwearDetector.dino">Try it out!</a>
-                            </div>
-                        </div>
-                    ))}
 
                 </div>
             ))}
