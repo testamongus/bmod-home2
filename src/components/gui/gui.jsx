@@ -5,7 +5,6 @@ import React from 'react';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
 
 import MenuBar from '../../containers/menu-bar.jsx';
-import FooterCustom from '../../containers/footer.jsx';
 import SectionInfo from '../../containers/section-info.jsx';
 import RecentChanges from '../../containers/recent-changes.jsx';
 import Gap from '../../containers/gap.jsx';
