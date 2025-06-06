@@ -11,7 +11,7 @@ const WhatsNewComponent = function (props) {
         <div id="whats-new">
             <div className="header">
                 <span>What's new?</span>
-                <a href="https://github.com/dinosaurmod" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/banana-mod" target="_blank" rel="noopener noreferrer">
                     See more
                 </a>
             </div>
