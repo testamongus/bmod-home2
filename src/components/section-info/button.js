@@ -1,5 +1,5 @@
 function openEditor() {
-    window.location.href = "https://dinosaurmod.github.io/editor.html"
+    window.location.href = "https://banana-mod.github.io/editor.html"
 }
 
 export default openEditor
